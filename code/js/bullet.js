@@ -2,13 +2,15 @@
 
 
 //子弹Bullet
-class Bullet{
+class allBullet{
 	//属性ele
 	constructor(ele,id){
 	[this.ele,this.id]=[document.createElement("div"),parseInt(Math.random()*100000000)]
 //	this.ele = document.createElement("div");
 //	this.id = parseInt(Math.random()*100000000);
 	}
+}
+	class Bullet extends allBullet{
 	//方法init
 	init(){
 		
@@ -39,7 +41,7 @@ class Bullet{
 	//方法move
 	move(){
 		let that = this;
-		this.timer = setInterval(function(){
+		this.timer = setInterval(()=>{
 			let y = that.ele.offsetTop - 10;
 			if (y < -18) {
 				clearInterval(that.timer); //停止移动
@@ -64,7 +66,7 @@ class Bullet{
 		let that = this;
 		const dieImgs = ["images2/die1.png", "images2/die2.png"]; 
 		let i = 0;
-		let dieTimer = setInterval(function(){
+		let dieTimer = setInterval(()=>{
 			if (i >= 1){
 				clearInterval(dieTimer); //停止爆炸
 				gameEngine.ele.removeChild(that.ele); //移除子弹
