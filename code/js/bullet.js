@@ -25,19 +25,7 @@ class allBullet{
 		return this;
 	}
 
-//		let init = this.init( ()=>{
-//		
-//		//添加
-//		gameEngine.allBullet[this.id] = this;
-//		console.log( gameEngine.allBullet );
-//		
-//		gameEngine.ele.appendChild(this.ele);
-//		this.ele.className = "bullet";
-//		this.ele.style.left = myPlane.ele.offsetLeft + myPlane.ele.offsetWidth/2 - this.ele.offsetWidth/2 + "px";
-//		this.ele.style.top = myPlane.ele.offsetTop - this.ele.offsetHeight + "px";
-//		return this;
-//	})
-	
+
 	//方法move
 	move(){
 		let that = this;

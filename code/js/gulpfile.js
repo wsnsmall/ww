@@ -9,29 +9,29 @@ var obj = {
 	minifyCSS: true //压缩页面CSS
 }
 
-//var gulp = require("gulp");
+var gulp = require("gulp");
 var uglify = require("gulp-uglify");
-//gulp.task("jsTask",function(){
-//	gulp.src("bullet.js")
-//	.pipe(uglify())
-//	.pipe(gulp.dest("test"))
-//});
-//gulp.task("default",["jsTask"]);
+gulp.task("jsTask",function(){
+	gulp.src("myplane.js")
+	.pipe(uglify())
+	.pipe(gulp.dest("test"))
+});
+gulp.task("default",["jsTask"]);
 
-var gulp = require('gulp');  
-var babel = require('gulp-babel');  
-var config={  
-    es6file:'bullet.js',  
-    es5file:'test/'  
-};  
-gulp.task('es6', function () {  
-    return gulp.src(config.es6file)  
-        .pipe(babel({  
-            presets: ['es2015']  
-        }))  
-          .pipe(uglify())  
-        .pipe(gulp.dest(config.es5file));  
-});  
-gulp.task('default', ['es6'], function () {  
-    
-});  
+//var gulp = require('gulp');  
+//var babel = require('gulp-babel');  
+//var config={  
+//  es6file:'*.js',  
+//  es5file:'test/'  
+//};  
+//gulp.task('es6', function () {  
+//  return gulp.src(config.es6file)  
+//      .pipe(babel({  
+//          presets: ['es2015']  
+//      }))  
+//        .pipe(uglify())  
+//      .pipe(gulp.dest(config.es5file));  
+//});  
+//gulp.task('default', ['es6'], function () {  
+//  
+//});  
